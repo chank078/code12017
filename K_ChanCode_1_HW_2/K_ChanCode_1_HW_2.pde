@@ -4,18 +4,20 @@ background(10,160,230);
 
 
 //backing
+int centerofsun = 250;
 noStroke();
 fill(230,210,60);
-ellipse(250,250, 350,350);
+ellipse(centerofsun,centerofsun, 350,350);
 
 //body
 fill(230,140,20);
-ellipse(250,250,200,200);
+ellipse(centerofsun,centerofsun,200,200);
 
 //eyes
+int centerofeye = 230;
 fill(0);
-ellipse(220,230,20,20);
-ellipse(280,230,20,20);
+ellipse(220,centerofeye,20,20);
+ellipse(280,centerofeye,20,20);
 fill(255);
 ellipse(220,235,10,10);
 ellipse(280,235,10,10);
