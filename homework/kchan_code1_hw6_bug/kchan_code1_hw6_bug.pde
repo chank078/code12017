@@ -1,7 +1,7 @@
 class Bug {
   
- float x = random(50,50)  ;
- float y = random(50,50) ;
+ float x ;
+ float y ;
  float XSpeed =random(-5,5);
  float YSpeed =random(-5,5);
  
@@ -28,19 +28,7 @@ class Bug {
  void draw(){
    x=x+XSpeed;
    y=y+YSpeed;
-   
-
- /*
- if(y > YBottom){
-     YSpeed =YSpeed * -1;
-     y = YBottom; 
-   }
-  
-  if(x>XRight){
-     XSpeed = XSpeed * -1;
-     x = XRight;
-   } */
-   
+     
  if(y < YTop){
      YSpeed = YSpeed *-1;
      y= YTop;
@@ -49,6 +37,7 @@ class Bug {
      XSpeed = XSpeed *-1;
      x = XLeft;
    }}
+   
 void mousePressed(){
  if(x>600 || y>600){
     x=random(50,50);
@@ -57,7 +46,15 @@ void mousePressed(){
   YSpeed =random(-5,5);}
 }}
    
-   
+void control() {
+  if (key == 'z' ) {
+    x -= 10;
+    y -= 10; }
+  else if (key == 'x'){
+    x += 10;
+    y += 10; }
+}
+    
 /*
  }
 
