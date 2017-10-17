@@ -13,5 +13,6 @@ void draw(){
 
  b.display();
  b.draw();
-b.mousePressed();
+ b.mousePressed();
+ b.control();
 }

@@ -28,19 +28,7 @@ class Bug {
  void draw(){
    x=x+XSpeed;
    y=y+YSpeed;
-   
-
- /*
- if(y > YBottom){
-     YSpeed =YSpeed * -1;
-     y = YBottom; 
-   }
-  
-  if(x>XRight){
-     XSpeed = XSpeed * -1;
-     x = XRight;
-   } */
-   
+     
  if(y < YTop){
      YSpeed = YSpeed *-1;
      y= YTop;
@@ -49,21 +37,23 @@ class Bug {
      XSpeed = XSpeed *-1;
      x = XLeft;
    }}
+   
 void mousePressed(){
  if(x>600 || y>600){
     x=random(50,50);
     XSpeed =random(-5,5);
     y=random(50,50);
   YSpeed =random(-5,5);}
-}}
+}
+void control() {
+  if (key == 'z' ) {
+    x -= 10;
+    y -= 10; }
+  else if (key == 'x'){
+    x += 10;
+    y += 10; }
+}
+    
+
+}
    
-   
-/*
- }
-  void mouseMoved(){
-    if (dist(mouseX,mouseY,x,y)<50){
-      x=random(100,500);
-      y=random(100,500);}
- 
- if (dist(10,10,x,y)<20){   XSpeed = XSpeed * -1; YSpeed = YSpeed * -1;   }
-*/ 
